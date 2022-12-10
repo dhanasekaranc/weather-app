@@ -7,7 +7,9 @@ const CityWeatherDetailHeader = ({detailCity, cities, setCities}) => {
     }
     const [isFavourite, setIsFavourite] = useState(checkIsCityFavourite(cities, detailCity));
 
-    const handleClick = () => {
+    const handleClick = (e) => {
+        console.log(cities);
+        e.preventDefault();
         if(isFavourite) {
             setCities({
                 selected: cities.selected,
@@ -18,7 +20,7 @@ const CityWeatherDetailHeader = ({detailCity, cities, setCities}) => {
         else {
             setCities({
                 selected: cities.selected,
-                favourites: [cities.favourites, detailCity]
+                favourites: [...cities.favourites, detailCity]
             })
             setIsFavourite(true);
         }
