@@ -12,8 +12,10 @@ const  Cities = ({showModal ,setShowModal, cities, setCities}) => {
     <div className='city'>
     <Sidebar/>
     <div className='city-container'>
-        <h3 className='city-head' >Cities</h3>
-        <button className='city-add-btn' onClick={handleClick}>+</button>
+        <div className='selected-city-header'>
+          <h3 className='city-head'>Cities</h3>
+          <button className='city-add-btn' onClick={handleClick}>+</button>
+        </div>
         <hr/>
         {
           cities.selected.length ?

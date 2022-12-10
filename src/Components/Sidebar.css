@@ -1,5 +1,6 @@
 .sidebar{
     display: table-cell;
+    width: 10vw;
     height: 600px;
     background-color: purple;
 }
