@@ -1,19 +1,31 @@
-.city-modal{
-    
-    height: 20vh;
-    width: 40vw;
+.city-modal {
+    min-height: 15vh;
+    max-height: 50vh;
+    width: 30vw;
     position: absolute ;
-    left: 40%;
-    top: 40%;
+    left: 35vw;
+    top: 25vh;
     z-index: 100;
     background-color: bisque;
     margin: 5px;
+    overflow-y: scroll;
+    border-radius: 10px;
 }
+
+.city-modal::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.cities-container {
+    padding: 5px;
+}
+
 .city-modal-header{
-    align-items: center;
-    height: 20px;
+    height: 30px;
     padding: 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    background-color: yellow;
 }

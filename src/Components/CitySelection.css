@@ -1,0 +1,14 @@
+.city-selection {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-city-button {
+    border-radius: 50%;
+    border: solid 1px black;
+}

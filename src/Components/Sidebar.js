@@ -7,9 +7,7 @@ const Sidebar = () => {
         <div className="sidebar">
                 <ul className="side-list">
                     <li><Link to="/" className="link">Home</Link></li>
-                    <li><Link to="/Cities" className="link" >Cities</Link></li>
-
-
+                    <li><Link to="/cities" className="link" >Cities</Link></li>
                 </ul>
         </div>
     )
