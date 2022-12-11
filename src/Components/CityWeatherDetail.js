@@ -3,12 +3,7 @@ import "./CityWeatherDetail.css";
 import CityWeatherDetailHeader from "./CityWeatherDetailHeader";
 
 const CityWeatherDetail = ({detailCity, cities, setCities}) => {
-    const handleClick = () => {
-        setCities({
-            selected: cities.selected,
-            favourites: [cities.favourites, detailCity]
-        })
-    }
+    
     return (
         <div className='city-weather-detail-container'>
                 <CityWeatherDetailHeader detailCity={detailCity} cities={cities} setCities={setCities} />

@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './CitiesModal.css';
 import { Cities } from "../data";
 import CitySelection from "./CitySelection";
 
 function CitiesModal({setShowModal, cities, setCities}) {
-    const handleClick = () =>{
-        setShowModal(false)
+
+  const [filteredCities, setfilteredCities] = useState(Cities);
+  const [searchInput, setSearchInput] = useState("");
+  const handleClick = () =>{
+    setShowModal(false)
+  }
+  const handleSearch = (e) => {
+    const value = e.target.value;
+    console.log(value);
+    if(value) {
+      const filtered = Cities.filter(city => city.name.toLowerCase().match(e.target.value.toLowerCase()));
+      setSearchInput(value);
+      setfilteredCities(filtered);
     }
+    else {
+      setSearchInput(value);
+      setfilteredCities(Cities);
+    }
+  }
     
   return (
       <div className='city-modal'>
@@ -15,9 +31,11 @@ function CitiesModal({setShowModal, cities, setCities}) {
             <button onClick={handleClick}>X</button>
         </div>
         <hr style={{margin: "0"}}/>
+        <input className="search-city" placeholder="Search"  value={searchInput} type="text" onChange={handleSearch} />
+        <hr style={{margin: "0"}}/>
         <div className='cities-container'>
           {
-            Cities.filter(city => !cities.selected.includes(city))
+            filteredCities.filter(city => !cities.selected.includes(city))
               .map(city =>
                <CitySelection key={city.id} city={city} cities={cities} setCities={setCities}
             />)
