@@ -1,26 +1,14 @@
 .sidebar{
-    display: table-cell;
-    min-width: 5vw;
-    max-width: 10vw;
-    height: 600px;
-    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #472978;
 }
-.side-list{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-li{
-    border: 1px solid white;
-    padding: 15px;
-    font-size: 18px;
-    font-weight: 600;
-    text-align: center;
-}
-ul li:active{
-    background-color: yellow;
-}
-.link{
+
+.link {
     color: white;
+    text-align: center;
+    width: 10;
+    padding: 30px;
     text-decoration: none;
 }
